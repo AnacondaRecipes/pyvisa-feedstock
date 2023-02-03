@@ -13,6 +13,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
@@ -37,6 +38,7 @@ test:
   commands:
     - pyvisa-info
     - pyvisa-shell -h
+    - pip-check
   imports:
     - pyvisa
 
@@ -55,6 +57,9 @@ about:
   dev_url: https://github.com/hgrecco/pyvisa
 
 extra:
+
+  skip-lints:
+    - invalid_url
 
   anaconda-services:
    ref: https://anaconda.zendesk.com/agent/tickets/32582
