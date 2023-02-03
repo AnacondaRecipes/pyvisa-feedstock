@@ -38,7 +38,7 @@ test:
   commands:
     - pyvisa-info
     - pyvisa-shell -h
-    - pip-check
+    - pip check
   imports:
     - pyvisa
 
