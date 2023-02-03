@@ -26,6 +26,7 @@ requirements:
     - pip
     - setuptools
     - setuptools_scm
+    - wheel
   run:
     - python
     - dataclasses  # [py <=36]
@@ -43,6 +44,7 @@ about:
   home: https://github.com/hgrecco/pyvisa
   license: MIT
   license_file: LICENSE
+  license_family: MIT
   summary: Control your instruments with Python.
   description: |
     PyVISA is a Python package that enables you to control all kinds of measurement devices
@@ -53,6 +55,12 @@ about:
   dev_url: https://github.com/hgrecco/pyvisa
 
 extra:
+
+  anaconda-services:
+   ref: https://anaconda.zendesk.com/agent/tickets/32582
+   recipe-maintainers:
+      - ianaobi
+
   recipe-maintainers:
     - melund
     - ddale
